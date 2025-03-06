@@ -15,4 +15,3 @@ for i in os.listdir(input):
     resized_img = img.resize(new_size, Image.NEAREST)
     output_path = os.path.join(output, i)
     resized_img.save(output_path)
-    print(f"Resized {i} to {new_size}")
