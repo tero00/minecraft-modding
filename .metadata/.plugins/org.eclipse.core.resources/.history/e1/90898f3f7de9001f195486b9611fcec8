@@ -1,0 +1,15 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import ter0minator.alchemyegg.RenderTransmutedEgg;
+import ter0minator.alchemyegg.EntityTransmutedEgg;
+
+public class ClientProxy extends CommonProxy {
+
+    @Override
+    public void registerRenderers() {
+        // Register the renderer for the TransmutedEgg entity
+        RenderingRegistry.registerEntityRenderingHandler(EntityTransmutedEgg.class, RenderTransmutedEgg::new);
+    }
+}

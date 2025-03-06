@@ -1,0 +1,44 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.SidedProxy;
+
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+public class Init {
+
+	@SidedProxy(
+		    clientSide = "ter0minator.alchemyegg.ClientProxy",
+		    serverSide = "ter0minator.alchemyegg.CommonProxy",
+		    modId = Reference.MODID // Add this line
+		)
+	public static CommonProxy proxy;
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        // Use the full ResourceLocation constructor
+        ResourceLocation entityId = new ResourceLocation(Reference.MODID, "transmuted_egg");
+        
+        EntityRegistry.registerModEntity(
+            entityId,
+            EntityTransmutedEgg.class,
+            "transmuted_egg", 
+            240, // MUST be unique network ID (not 0)
+            this,
+            64,
+            10,
+            true
+        );
+        
+        // Register spawn egg if needed
+        EntityRegistry.registerEgg(entityId, 0xFFFFFF, 0x000000);
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        proxy.registerRenderers(); 
+    }
+}

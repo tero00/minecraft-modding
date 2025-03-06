@@ -1,0 +1,30 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+public class Init {
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        // Register the custom recipe handler
+        MinecraftForge.EVENT_BUS.register(new EggRecipeHandler());
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        // Add a smelting recipe for the regular egg to produce the TransmutedEgg
+        FurnaceRecipes.instance().addSmeltingRecipe(
+            new ItemStack(Items.EGG), // Input
+            new ItemStack(Eggs.TRANSMUTED_EGG), // Output
+            0.5f // Experience
+        );
+    }
+}

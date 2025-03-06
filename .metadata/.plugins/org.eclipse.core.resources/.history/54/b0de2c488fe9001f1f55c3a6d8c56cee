@@ -1,0 +1,28 @@
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(modid = "testmod", name = "Test Mod", version = "1.0")
+public class TestMod {
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent e) {
+        EntityRegistry.registerModEntity(
+            new ResourceLocation("testmod", "test_egg"),
+            EntityTransmutedEgg.class,
+            "test_egg",
+            255,
+            this,
+            64,
+            10,
+            true
+        );
+    }
+    
+    @EventHandler
+    public void init(FMLInitializationEvent e) {
+        RenderingRegistry.registerEntityRenderingHandler(
+            EntityTransmutedEgg.class,
+            manager -> new RenderTransmutedEgg(manager)
+        );
+    }
+}

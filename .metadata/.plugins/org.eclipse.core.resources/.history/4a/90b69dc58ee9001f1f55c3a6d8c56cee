@@ -1,0 +1,42 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends Render<EntityTransmutedEgg> {
+    
+    private static final ResourceLocation TEST_TEXTURE = new ResourceLocation("minecraft", "textures/items/snowball.png");
+
+    public RenderTransmutedEgg(RenderManager manager) {
+        super(manager);
+        System.out.println("RENDERER INSTANTIATED ON CLIENT: " + Minecraft.getMinecraft().getSession().getUsername()); // Debug line
+    }
+
+    @Override
+    public void doRender(EntityTransmutedEgg entity, double x, double y, double z, float entityYaw, float partialTicks) {
+        System.out.println("Attempting to render entity at " + x + "," + y + "," + z); // Debug line
+        
+        GlStateManager.pushMatrix();
+        GlStateManager.translate(x, y, z);
+        GlStateManager.enableRescaleNormal();
+        
+        this.bindTexture(TEST_TEXTURE);
+        Minecraft.getMinecraft().getRenderItem().renderItem(
+            new ItemStack(Items.SNOWBALL),
+            TransformType.GROUND
+        );
+        
+        GlStateManager.disableRescaleNormal();
+        GlStateManager.popMatrix();
+    }
+
+    @Override
+    protected ResourceLocation getEntityTexture(EntityTransmutedEgg entity) {
+        return TEST_TEXTURE;
+    }
+}

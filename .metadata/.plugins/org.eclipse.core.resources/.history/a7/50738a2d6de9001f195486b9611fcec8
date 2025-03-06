@@ -1,0 +1,27 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+
+@Mod.EventBusSubscriber
+public class EggEventHandler {
+
+    @SubscribeEvent
+    public static void registerItems(RegistryEvent.Register<Item> event) {
+        // Initialize the TransmutedEgg item
+        // Register the item
+        event.getRegistry().register(new TransmutedEgg());
+    }
+
+    @SubscribeEvent
+    public static void onModelRegister(ModelRegistryEvent event) {
+        // Register the item model
+    	ModelLoader.setCustomModelResourceLocation(Item.getByNameOrId(Reference.MODID + ":transmuted_egg"), 0, new ModelResourceLocation(Reference.MODID + ":transmuted_egg", "inventory"));
+    }
+}

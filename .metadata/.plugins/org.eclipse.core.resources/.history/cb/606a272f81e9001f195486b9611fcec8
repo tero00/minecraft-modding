@@ -1,0 +1,26 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends RenderSnowball<EntityTransmutedEgg> {
+
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    public RenderTransmutedEgg(RenderManager renderManager) {
+        super(renderManager, Eggs.TRANSMUTED_EGG, null);
+        LOGGER.info("RenderTransmutedEgg initialized with item: {}", Eggs.TRANSMUTED_EGG);
+    }
+
+    @Override
+    public void doRender(EntityTransmutedEgg entity, double x, double y, double z, float entityYaw, float partialTicks) {
+        LOGGER.info("Rendering EntityTransmutedEgg at ({}, {}, {})", x, y, z);
+        super.doRender(entity, x, y, z, entityYaw, partialTicks);
+    }
+}

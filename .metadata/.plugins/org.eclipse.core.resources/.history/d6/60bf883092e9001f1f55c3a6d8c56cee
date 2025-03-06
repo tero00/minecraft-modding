@@ -1,0 +1,11 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.World;
+
+public class TestEntity extends EntityThrowable {
+    public TestEntity(World world) { super(world); }
+    protected void onImpact(RayTraceResult result) {}
+}
+

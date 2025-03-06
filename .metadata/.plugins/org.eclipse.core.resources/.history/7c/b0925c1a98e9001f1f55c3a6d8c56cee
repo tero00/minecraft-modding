@@ -1,0 +1,52 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends Render<EntityTransmutedEgg> {
+    private static final ResourceLocation FORCED_TEXTURE = 
+        new ResourceLocation("minecraft:textures/items/egg.png");
+    
+    public RenderTransmutedEgg(RenderManager manager) {
+        super(manager);
+    }
+
+    @Override
+    public void doRender(EntityTransmutedEgg entity, double x, double y, double z, float yaw, float partialTicks) {
+        // 1. Force vanilla egg texture
+        bindTexture(FORCED_TEXTURE);
+        
+        // 2. Render as textured cube
+        GlStateManager.pushMatrix();
+        GlStateManager.translate(x, y + 0.5, z);
+        GlStateManager.scale(0.5, 0.5, 0.5);
+        
+        Tessellator tess = Tessellator.getInstance();
+        BufferBuilder buffer = tess.getBuffer();
+        
+        buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+        buffer.pos(-1, -1, 0).tex(0, 1).endVertex();
+        buffer.pos(1, -1, 0).tex(1, 1).endVertex();
+        buffer.pos(1, 1, 0).tex(1, 0).endVertex();
+        buffer.pos(-1, 1, 0).tex(0, 0).endVertex();
+        tess.draw();
+        
+        GlStateManager.popMatrix();
+    }
+
+    @Override
+    protected ResourceLocation getEntityTexture(EntityTransmutedEgg entity) {
+        return FORCED_TEXTURE;
+    }
+}

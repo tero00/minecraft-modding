@@ -1,0 +1,53 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.BufferBuilder;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import org.lwjgl.opengl.GL11;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends Render<EntityTransmutedEgg> {
+    
+    // Use vanilla diamond texture for unmistakable verification
+    private static final ResourceLocation TEST_TEXTURE = 
+        new ResourceLocation("minecraft", "textures/items/diamond.png");
+
+    public RenderTransmutedEgg(RenderManager manager) {
+        super(manager);
+    }
+
+    @Override
+    public void doRender(EntityTransmutedEgg entity, double x, double y, double z, float yaw, float partialTicks) {
+        GlStateManager.pushMatrix();
+        GlStateManager.translate(x, y + 0.5, z); // Center vertically
+        
+        // Manual texture quad rendering
+        this.bindTexture(TEST_TEXTURE);
+        GlStateManager.disableLighting();
+        GlStateManager.color(1, 1, 1, 1);
+        
+        Tessellator tess = Tessellator.getInstance();
+        BufferBuilder buffer = tess.getBuffer();
+        
+        buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+        buffer.pos(-0.5, -0.5, 0).tex(0, 1).endVertex();
+        buffer.pos(0.5, -0.5, 0).tex(1, 1).endVertex();
+        buffer.pos(0.5, 0.5, 0).tex(1, 0).endVertex();
+        buffer.pos(-0.5, 0.5, 0).tex(0, 0).endVertex();
+        tess.draw();
+        
+        GlStateManager.enableLighting();
+        GlStateManager.popMatrix();
+    }
+
+    @Override
+    protected ResourceLocation getEntityTexture(EntityTransmutedEgg entity) {
+        return TEST_TEXTURE;
+    }
+}

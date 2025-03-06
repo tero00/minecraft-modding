@@ -1,0 +1,27 @@
+package ter0minator.alchemyegg;
+
+import java.io.IOException;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.IResource;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class TextureDebugger {
+    public static void checkTextureLoading() {
+        Minecraft.getMinecraft().addScheduledTask(() -> {
+            ResourceLocation testTex = new ResourceLocation("alchemyegg:items/transmuted_egg");
+            try {
+                IResource resource = Minecraft.getMinecraft()
+                    .getResourceManager()
+                    .getResource(testTex);
+                System.out.println("TEXTURE LOADED SUCCESSFULLY FROM: " + resource.getResourceLocation());
+            } catch (IOException e) {
+                System.out.println("TEXTURE LOAD FAILED: " + testTex);
+                e.printStackTrace();
+            }
+        });
+    }
+}

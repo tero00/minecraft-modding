@@ -1,0 +1,23 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderItem;
+import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends RenderSnowball<EntityTransmutedEgg> {
+    public RenderTransmutedEgg(RenderManager renderManager) {
+        // Temporarily use SNOWBALL instead of your item for testing
+        super(renderManager, Items.SNOWBALL, Minecraft.getMinecraft().getRenderItem());
+    }
+}

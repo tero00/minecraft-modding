@@ -1,0 +1,40 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.SidedProxy;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+public class Init {
+
+    private static final Logger LOGGER = LogManager.getLogger();
+    public static Init instance; // Store the mod instance
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+
+        LOGGER.info("Pre Initialization phase");
+        // Register the custom entity
+        EntityRegistry.registerModEntity(
+            new ResourceLocation(Reference.MODID, "transmuted_egg"), // Registry name
+            EntityTransmutedEgg.class, // Entity class
+            "transmuted_egg", // Entity name
+            0, // Entity ID
+            this, // Mod instance
+            64, // Tracking range
+            10, // Update frequency
+            true // Send velocity updates
+        );
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        LOGGER.info("Init: Initialization phase");
+    }
+}

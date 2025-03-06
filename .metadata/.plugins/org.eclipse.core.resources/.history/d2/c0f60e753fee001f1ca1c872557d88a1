@@ -1,0 +1,15 @@
+package ter0minator.untiered;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+
+public class UntieredTab extends CreativeTabs {
+    public UntieredTab(String label) {
+        super(label);
+    }
+
+    @Override
+    public ItemStack createIcon() {
+        return new ItemStack(null);
+    }
+}

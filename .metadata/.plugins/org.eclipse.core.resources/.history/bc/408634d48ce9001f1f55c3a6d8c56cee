@@ -1,0 +1,48 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderItem;
+import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends Render<EntityTransmutedEgg> {
+    
+    private final ItemStack itemStack;
+    private final RenderItem itemRenderer;
+
+    public RenderTransmutedEgg(RenderManager renderManager, ItemStack itemStack) {
+        super(renderManager);
+        this.itemStack = itemStack;
+        this.itemRenderer = Minecraft.getMinecraft().getRenderItem();
+    }
+
+    @Override
+    public void doRender(EntityTransmutedEgg entity, double x, double y, double z, float entityYaw, float partialTicks) {
+        GlStateManager.pushMatrix();
+        GlStateManager.translate((float)x, (float)y + 0.1F, (float)z); // Adjust Y offset if needed
+        GlStateManager.enableRescaleNormal();
+        GlStateManager.scale(0.5F, 0.5F, 0.5F); // Scale down to match vanilla egg size
+        GlStateManager.rotate(-this.renderManager.playerViewY, 0.0F, 1.0F, 0.0F);
+        GlStateManager.rotate(this.renderManager.playerViewX, 1.0F, 0.0F, 0.0F);
+        
+        // Bind the texture atlas and render the item
+        this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+        this.itemRenderer.renderItem(this.itemStack, TransformType.GROUND);
+        
+        GlStateManager.disableRescaleNormal();
+        GlStateManager.popMatrix();
+    }
+
+    @Override
+    protected ResourceLocation getEntityTexture(EntityTransmutedEgg entity) {
+        return TextureMap.LOCATION_BLOCKS_TEXTURE;
+    }
+}

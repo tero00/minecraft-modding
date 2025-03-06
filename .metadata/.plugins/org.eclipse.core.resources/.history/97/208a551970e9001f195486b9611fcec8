@@ -1,0 +1,45 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class EggRecipeHandler {
+
+    private static final Random RANDOM = new Random();
+
+    @SubscribeEvent
+    public void onItemSmelted(PlayerEvent.ItemSmeltedEvent event) {
+        ItemStack smeltedItem = event.smelting;
+
+        // Check if the smelted item is the TransmutedEgg
+        if (smeltedItem.getItem() == Eggs.TRANSMUTED_EGG) {
+            // Replace the smelted item with a random item
+            ItemStack randomItemStack = getRandomItemStack();
+            if (!randomItemStack.isEmpty()) {
+                // Remove the original smelted item
+                event.player.inventory.decrStackSize(event.player.inventory.getSlotFor(smeltedItem), 1);
+                // Add the random item to the player's inventory
+                event.player.inventory.addItemStackToInventory(randomItemStack);
+            }
+        }
+    }
+
+    private static ItemStack getRandomItemStack() {
+        Item randomItem = getRandomItem();
+        if (randomItem != null) {
+            return new ItemStack(randomItem, 1);
+        }
+        return ItemStack.EMPTY; // Fallback in case no item is found
+    }
+
+    private static Item getRandomItem() {
+        List<Item> items = new ArrayList<>();
+        for (ResourceLocation key : ForgeRegistries.ITEMS.getKeys())

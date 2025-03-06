@@ -1,0 +1,63 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class TransmutedEgg extends Item {
+
+    public TransmutedEgg() {
+        setCreativeTab(CreativeTabs.MISC);
+        setUnlocalizedName("transmuted_egg");
+        setRegistryName(Reference.MODID, "transmuted_egg");
+        setMaxStackSize(16); 
+    }
+
+    private static final Random RANDOM = new Random();
+    
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
+        ItemStack holding = player.getHeldItem(hand);
+
+        world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_SNOW_BREAK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+        world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_STONE_BREAK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+        world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_MULE_HURT, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+
+        if (!world.isRemote) {
+            Item randomItem = getRandomItem();
+            if (randomItem != null) {
+                ItemStack randomItemStack = new ItemStack(randomItem, 1);
+                player.entityDropItem(randomItemStack, 0.0F);
+            }
+            if (!player.capabilities.isCreativeMode) {
+                holding.shrink(1);
+            }
+        }
+        return new ActionResult<>(EnumActionResult.SUCCESS, holding);
+    }
+    
+    private static Item getRandomItem() {
+        List<Item> items = new ArrayList<>();
+        for (ResourceLocation key : ForgeRegistries.ITEMS.getKeys()) {
+            items.add(ForgeRegistries.ITEMS.getValue(key));
+        }
+        if (!items.isEmpty()) {
+            return items.get(RANDOM.nextInt(items.size()));
+        }
+        return null;
+    }
+
+}

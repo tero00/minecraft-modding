@@ -1,0 +1,6 @@
+package ter0minator.alchemyegg;
+
+public class CommonProxy {
+    public void registerRenderers() {
+    }
+}

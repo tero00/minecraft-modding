@@ -1,0 +1,16 @@
+[
+{
+  "modid": "alchemyegg",
+  "name": "Alchemy Egg",
+  "description": "Allows you to alchemically modify eggs and what they contain",
+  "version": "1.0",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ter0minator"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

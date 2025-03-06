@@ -1,0 +1,16 @@
+[
+{
+  "modid": "alchemyegg",
+  "name": "Alchemy Egg",
+  "description": "Why don't you try heating it?",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ter0minator"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

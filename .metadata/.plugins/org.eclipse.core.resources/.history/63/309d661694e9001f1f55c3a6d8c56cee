@@ -1,0 +1,17 @@
+package ter0minator.alchemyegg;
+
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
+
+public class ClientProxy extends CommonProxy {
+	@Override
+	public void registerRenderers() {
+	    System.out.println("REGISTERING EGG RENDERER"); // Debug line
+	    RenderingRegistry.registerEntityRenderingHandler(
+	        EntityTransmutedEgg.class,
+	        manager -> {
+	            System.out.println("Creating renderer instance"); // Debug line
+	            return new RenderTransmutedEgg(manager);
+	        }
+	    );
+	}
+}

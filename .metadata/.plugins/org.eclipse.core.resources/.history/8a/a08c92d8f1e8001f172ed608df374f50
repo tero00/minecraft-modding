@@ -1,0 +1,23 @@
+package main.java.ter0minator.untiered;
+
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import ter0minator.untiered.util.Reference;
+
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+
+public class Untiered {
+	
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+    }
+}

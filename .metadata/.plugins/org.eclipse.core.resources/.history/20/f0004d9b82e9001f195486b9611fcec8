@@ -1,0 +1,32 @@
+package ter0minator.alchemyegg;
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.SidedProxy;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+public class Init {
+
+    private static final Logger LOGGER = LogManager.getLogger();
+    public static Init instance; // Store the mod instance
+
+    @SidedProxy(
+        clientSide = "ter0minator.alchemyegg.ClientProxy",
+        serverSide = "ter0minator.alchemyegg.CommonProxy"
+    )
+    public static CommonProxy proxy;
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        LOGGER.info("Init: Pre-initialization phase");
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        LOGGER.info("Init: Initialization phase");
+    }
+}

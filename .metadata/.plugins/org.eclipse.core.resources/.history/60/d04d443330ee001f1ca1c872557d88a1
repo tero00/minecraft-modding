@@ -1,0 +1,169 @@
+package ter0minator.untiered;
+
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.util.SoundEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.registries.IForgeRegistry;
+
+@Mod.EventBusSubscriber
+public class UntieredEventHandler {	
+	
+	static final ToolMaterial TIERED = EnumHelper.addToolMaterial("tiered",   	3, 1811, 2F, 0F, 40);
+	static final ToolMaterial UNTIERED = EnumHelper.addToolMaterial("untiered", 3, 3678, 2F, 0F, 40);
+	
+	static final ArmorMaterial SOULLESS = EnumHelper.addArmorMaterial("soulless", "untiered:soulless",     	    24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
+	static final ArmorMaterial RITUAL = EnumHelper.addArmorMaterial("ritual", "untiered:ritual", 		      	24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+	static final ArmorMaterial JUNGLE = EnumHelper.addArmorMaterial("jungle", "untiered:jungle", 		      	24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+	static final ArmorMaterial SPECTRE = EnumHelper.addArmorMaterial("spectre", "untiered:spectre", 	      	24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+	static final ArmorMaterial WOODLAND = EnumHelper.addArmorMaterial("woodland", "untiered:woodland", 	  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+	static final ArmorMaterial TWILIGHT = EnumHelper.addArmorMaterial("twilight", "untiered:twilight", 	  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+	static final ArmorMaterial FAIRY = EnumHelper.addArmorMaterial("fairy", "untiered:fairy", 			  	    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
+	static final ArmorMaterial BEEHIVE = EnumHelper.addArmorMaterial("beehive", "untiered:beehive", 	        56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
+	static final ArmorMaterial SANDS = EnumHelper.addArmorMaterial("sands", "untiered:sands", 			  	    24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+	static final ArmorMaterial ACROPOLIS = EnumHelper.addArmorMaterial("acropolis", "untiered:acropolis",       56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5.0F);
+	static final ArmorMaterial CORAL = EnumHelper.addArmorMaterial("coral", "untiered:coral", 			  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
+	static final ArmorMaterial WATERDRAGON = EnumHelper.addArmorMaterial("waterdragon", "untiered:waterdragon", 56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
+	static final ArmorMaterial LEAFDRAGON = EnumHelper.addArmorMaterial("leafdragon", "untiered:leafdragon",    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.0F);
+	static final ArmorMaterial FIREDRAGON = EnumHelper.addArmorMaterial("firedragon", "untiered:firedragon",    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
+	static final ArmorMaterial CANDY = EnumHelper.addArmorMaterial("candy", "untiered:candy",   		        56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
+	static final ArmorMaterial ZAARVOX = EnumHelper.addArmorMaterial("zaarvox", "untiered:zaarvox",		  	    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
+	static final ArmorMaterial RESURRECTED = EnumHelper.addArmorMaterial("resurrected", "untiered:resurrected", 56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
+	static final ArmorMaterial SPECTRAL = EnumHelper.addArmorMaterial("spectral", "untiered:spectral", 	  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
+	
+	
+	static final String[] SPEED = new String[] {
+			"kendo_stick","muramasa", "masamune", "sadamune", "ichimonji", "jewel_eye", "demon_edge", "sky_edge", "night_edge", 
+			"amakuni", "kunimitsu", "kotetsu", "kusanagi", "doku_no_ken", "celestial", "ray_katana", "izanami", "izanagi", "fencoil_staff", "thorn_staff", 
+			"storm_staff", "martyr_staff", "witch_staff", "femur_staff", "searing_staff", "breath_staff", "pillar_staff", "realmshaper_staff", "ice_staff", 
+			"sire_staff",  "soulwrest_staff", "fulcrum_staff",  "duskdawn_staff", "disintegrator_staff", "hegemony_staff", "spire_staff"
+			};
+
+	static final String[] EXTRA_SPEED = new String[] {
+			"etherite_dagger", "queen_bee_stinger", "spirit_dagger", "golem_dagger", "sunshine_dagger", "agate_dagger", "emerald_dagger", "foul_dagger", "deeds_dagger", 
+			"hatred_dagger", "dirk_dagger", "blue_dagger", "rose_dagger", "obsidian_dagger", "mithril_dagger", "rage_dagger", "bone_dagger", "goredrill_dagger", 
+			"bloodplay_dagger", "mightflay_dagger", "taproot_dagger", "widowmaker_dagger", "heartbreaker_dagger", "consuming_dagger", "cold_iron_dagger", 
+			"doubting_dagger", "white_wind_dagger", "vulconus_dagger", "ungil_dagger", "arakaali_dagger", "bino_dagger", "divinarius_dagger", "ame_no_uzume", 
+			"fujin", "omononushi", "okuninushi", "omoikaine", "raijin", "ryujin", "suijin", "takemikazuchi", "takeminakata", "tsukuyomi", "amaterasu"
+			};
+	
+	static final String[] DAMAGE = new String[] {
+			"fairy_sword", "oryx_sword", "doctor_sword", "skull_sword", "crystal_sword", "indomptable_sword", "acclaim_sword", "majesty_sword", "skysplitter_sword", 
+			"splendor_sword", "archon_sword", "dragonsoul_sword", "ravenheart_sword", "falchion_sword", "redbeak_sword", "tempestuous_sword", "prismatic_sword", 
+			"scaeva_sword", "iron_mass_sword", "bound_sword", "scorned_sword", "unleashed_sword", "beltimber_sword", "grelwood_sword", "sun_sword", "aurumvorax_sword", 
+			"cospri_sword", "edge_sword", "est_sword", "hiltless_sword", "oro_sword", "oni_sword", "lakishu_sword", "ephemeral_sword", "innbury_sword", 
+			"nametaker_sword", "story_sword", "fate_sword", "hyaon_sword", "rippling_sword", "varunastra_sword", "dreamfeather_sword", "rigwald_sword", "ahn_sword", 
+			"rebuke_sword", "saviour_sword", "ewar_sword", "daresso_sword", "fidelitas_sword", "rakiata_sword", "kondo_sword", "doomsower_sword",
+			"eagle_axe", "dreadarc_axe", "fury_axe", "moon_axe", "actum_axe", "jack_axe", "dyadus_axe"
+			};
+
+	
+	static final String[] EXTRA_DAMAGE = new String[] {"gore_mace", "lavianga_mace",  "clay_mace", "frost_mace", "nebuloch_mace", "axiom_mace", 
+			"brutus_mace", "bitter_mace", "seer_mace", "truth_mace", "balefire_mace", "doon_mace", "augyre_mace","hymn_mace", "quecholli_mace", "baptism_mace", 
+			"chober_mace", "jorrhast_mace", "voidhome_mace", "tide_mace", "kongor_mace", "demon_blade", "colossus_sword", "slasher_sword", 
+			"bedrock_sword", "limb_axe", "reaper_axe", "harvest_axe", "sinvicta_axe", "atziri_axe", "hezmana_axe", "debeon_axe", "kitava_axe"
+			};
+
+	static IForgeRegistry<Item> reg;
+	
+    @SubscribeEvent
+    public static void registerItems(RegistryEvent.Register<Item> event) {
+    	reg = event.getRegistry();
+
+    	regArmorSet("woodland", WOODLAND);
+    	regArmorSet("twilight", TWILIGHT);
+    	regArmorSet("fairy", FAIRY);
+    	regArmorSet("soulless", SOULLESS);
+    	regArmorSet("acropolis", ACROPOLIS);
+    	regArmorSet("coral", CORAL);
+    	regArmorSet("spectral", SPECTRAL);
+    	regArmorSet("waterdragon", WATERDRAGON);
+    	regArmorSet("leafdragon", LEAFDRAGON);
+    	regArmorSet("firedragon", FIREDRAGON);
+
+    	regArmorPiece("ritual_helmet", RITUAL, 1, 0);
+    	regArmorPiece("ritual_chestplate", RITUAL, 1, 1);
+    	
+    	regArmorPiece("jungle_helmet", JUNGLE, 1, 0);
+    	regArmorPiece("jungle_chestplate", JUNGLE, 1, 1);
+    	
+    	regArmorPiece("spectre_helmet", SPECTRE, 1, 0);
+    	regArmorPiece("spectre_chestplate", SPECTRE, 1, 1);
+
+    	regArmorPiece("beehive_helmet", BEEHIVE, 1, 0);
+    	regArmorPiece("sands_leggings", SANDS, 2, 2);
+    	regArmorPiece("candy_chestplate", CANDY, 1, 1);
+    	regArmorPiece("resurrected_chestplate", RESURRECTED, 1, 1);
+    	regArmorPiece("zaarvox_chestplate", ZAARVOX, 1, 1);
+    	
+    	
+    	for(String name : SPEED) {
+	    	reg.register(new Weapon(TIERED, name, 0.835, 2.5));
+			}
+    	
+    	for(String name : EXTRA_SPEED) {
+			reg.register(new Weapon(TIERED, name, 0.625, 2.165));
+			}
+    	
+    	for(String name : DAMAGE) {
+	    	reg.register(new Weapon(TIERED, name, 1, 4));
+			}
+    	
+    	for(String name : EXTRA_DAMAGE) {
+	    	reg.register(new Weapon(TIERED, name, 1.25, 5.665));
+			}
+
+    	reg.register(new Weapon(UNTIERED, "void_katana", 1.25, 10));
+    	reg.register(new Weapon(UNTIERED, "marohi_mace", 1.25, 10));
+    	reg.register(new Weapon(UNTIERED, "embrace_axe", 1.25, 10));
+    	reg.register(new Weapon(UNTIERED, "starforge_sword", 1, 5));
+    	reg.register(new Weapon(UNTIERED, "bright_mace", 0.4, 2));
+    	reg.register(new Weapon(UNTIERED, "cronus_dagger", 0.625, 4));
+    	reg.register(new Weapon(UNTIERED, "divinity_sword", 1, 5));
+    }
+    
+
+	
+	private static void regArmorSet(final String name, final ItemArmor.ArmorMaterial material) {
+        reg.register(new Armor(name + "_helmet", material, 1, equip(0)));
+        reg.register(new Armor(name + "_chestplate", material, 1, equip(1)));
+        reg.register(new Armor(name + "_leggings", material, 2, equip(2)));
+        reg.register(new Armor(name + "_boots", material, 1, equip(3)));
+    }
+	
+	private static void regArmorPiece(final String name, final ItemArmor.ArmorMaterial material, final int index, final int slot) {
+        reg.register(new Armor(name, material, index, equip(slot)));
+    }
+
+	static EntityEquipmentSlot equip(int slot) {
+		if (slot == 0) {
+			return EntityEquipmentSlot.HEAD;
+		}
+		else if (slot == 1) {
+			return EntityEquipmentSlot.CHEST;
+		}
+		else if (slot == 2) {
+			return EntityEquipmentSlot.LEGS;
+		}
+		return EntityEquipmentSlot.FEET;
+	}
+
+    @SubscribeEvent
+    public static void onModelRegister(ModelRegistryEvent event) {
+    	for(Item item : Item.REGISTRY) {
+    		if(item.getRegistryName().getResourceDomain().equals(Reference.MODID)) {
+    			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+    		}
+    	}
+    }
+}

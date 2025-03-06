@@ -1,0 +1,41 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends Render<EntityTransmutedEgg> {
+
+    public RenderTransmutedEgg(RenderManager manager) {
+        super(manager);
+        this.shadowSize = 0.15F;
+    }
+
+    @Override
+    public void doRender(EntityTransmutedEgg entity, double x, double y, double z, float entityYaw, float partialTicks) {
+        GlStateManager.pushMatrix();
+        GlStateManager.translate(x, y, z);
+        GlStateManager.enableRescaleNormal();
+        
+        // Bind block texture atlas (REQUIRED for items)
+        bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+        
+        // Render a simple spinning cube
+        GlStateManager.rotate(entity.ticksExisted * 10, 1, 1, 0);
+        Minecraft.getMinecraft().getBlockRendererDispatcher()
+            .renderBlockBrightness(Blocks.STONE.getDefaultState(), 1.0F);
+        
+        GlStateManager.disableRescaleNormal();
+        GlStateManager.popMatrix();
+    }
+
+    @Override
+    protected ResourceLocation getEntityTexture(EntityTransmutedEgg entity) {
+        return TextureMap.LOCATION_BLOCKS_TEXTURE;
+    }
+}

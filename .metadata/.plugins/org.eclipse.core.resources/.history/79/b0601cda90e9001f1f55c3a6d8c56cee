@@ -1,0 +1,33 @@
+package ter0minator.alchemyegg;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+
+@Mod(modid = "testmod", name = "Test Mod", version = "1.0")
+public class Init {
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent e) {
+        EntityRegistry.registerModEntity(
+            new ResourceLocation("testmod", "test_egg"),
+            EntityTransmutedEgg.class,
+            "test_egg",
+            255,
+            this,
+            64,
+            10,
+            true
+        );
+    }
+    
+    @EventHandler
+    public void init(FMLInitializationEvent e) {
+        RenderingRegistry.registerEntityRenderingHandler(
+            EntityTransmutedEgg.class,
+            manager -> new RenderTransmutedEgg(manager)
+        );
+    }
+}

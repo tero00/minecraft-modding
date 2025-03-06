@@ -1,0 +1,16 @@
+[
+{
+  "modid": "alchemyegg",
+  "name": "Alchemy Egg",
+  "description": "Cook it, what could happen",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ter0minator"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

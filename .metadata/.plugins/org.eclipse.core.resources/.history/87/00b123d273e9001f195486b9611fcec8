@@ -1,0 +1,12 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class TransmutedEgg extends Item {
+    public TransmutedEgg() {
+        setCreativeTab(CreativeTabs.MISC); 
+        setUnlocalizedName("transmuted_egg"); 
+        setRegistryName(Reference.MODID, "transmuted_egg"); 
+    }
+}

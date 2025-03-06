@@ -1,0 +1,9 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.RenderItem;
+import net.minecraft.item.Item;
+
+public class Eggs {
+    public static final RenderItem RENDER_TRANSMUTED_EGG = null;
+	public static Item TRANSMUTED_EGG; 
+}

@@ -1,0 +1,14 @@
+package ter0minator.alchemyegg;
+
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
+public class RenderTransmutedEgg extends RenderSnowball<EntityTransmutedEgg> {
+    public RenderTransmutedEgg(RenderManager renderManager) {
+        super(renderManager, Eggs.TRANSMUTED_EGG, Eggs.TRANSMUTED_EGG);
+    	System.out.println("0000 RenderTransmutedEgg");
+    }
+}
