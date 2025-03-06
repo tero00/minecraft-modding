@@ -2,7 +2,6 @@ import os
 
 sprites = [f for f in os.listdir("sprites_scaled")]
 columns = 10 
-
 with open("GALLERY.md", "w") as f:
     f.write("# Sprite Gallery\n\n")
     f.write("<table>\n")
