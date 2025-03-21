@@ -31,7 +31,6 @@
 <fullyQualifiedTypeName name="net.minecraft.world.World"/>
 <fullyQualifiedTypeName name="net.minecraft.util.math.RayTraceResult"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.Render"/>
-<fullyQualifiedTypeName name="net.minecraft.init.SoundEvents"/>
 <fullyQualifiedTypeName name="net.minecraft.util.SoundCategory"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.entity.RenderSnowball"/>
 <fullyQualifiedTypeName name="net.minecraft.world.WorldServer"/>
@@ -52,4 +51,5 @@
 <fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
 <fullyQualifiedTypeName name="ter0minator.untiered.UntieredEventHandler"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="net.minecraft.init.SoundEvents"/>
 </qualifiedTypeNameHistroy>

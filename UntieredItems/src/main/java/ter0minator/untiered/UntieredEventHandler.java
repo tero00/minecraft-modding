@@ -18,34 +18,56 @@ import net.minecraftforge.registries.IForgeRegistry;
 @Mod.EventBusSubscriber
 public class UntieredEventHandler {	
 	
-	static final ToolMaterial TIERED = EnumHelper.addToolMaterial("tiered",   	3, 1811, 2F, 0F, 40);
-	static final ToolMaterial UNTIERED = EnumHelper.addToolMaterial("untiered", 3, 3678, 2F, 0F, 40);
+	static final ToolMaterial UNTIERED = EnumHelper.addToolMaterial("untiered", 3, 1999, 2F, 0F, 40);
 	
-	static final ArmorMaterial SOULLESS = EnumHelper.addArmorMaterial("soulless", "untiered:soulless",     	    24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
-	static final ArmorMaterial RITUAL = EnumHelper.addArmorMaterial("ritual", "untiered:ritual", 		      	24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
-	static final ArmorMaterial JUNGLE = EnumHelper.addArmorMaterial("jungle", "untiered:jungle", 		      	24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
-	static final ArmorMaterial SPECTRE = EnumHelper.addArmorMaterial("spectre", "untiered:spectre", 	      	24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
-	static final ArmorMaterial WOODLAND = EnumHelper.addArmorMaterial("woodland", "untiered:woodland", 	  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
-	static final ArmorMaterial TWILIGHT = EnumHelper.addArmorMaterial("twilight", "untiered:twilight", 	  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
-	static final ArmorMaterial FAIRY = EnumHelper.addArmorMaterial("fairy", "untiered:fairy", 			  	    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
-	static final ArmorMaterial BEEHIVE = EnumHelper.addArmorMaterial("beehive", "untiered:beehive", 	        56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
-	static final ArmorMaterial SANDS = EnumHelper.addArmorMaterial("sands", "untiered:sands", 			  	    24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
-	static final ArmorMaterial ACROPOLIS = EnumHelper.addArmorMaterial("acropolis", "untiered:acropolis",       56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 5.0F);
-	static final ArmorMaterial CORAL = EnumHelper.addArmorMaterial("coral", "untiered:coral", 			  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
-	static final ArmorMaterial WATERDRAGON = EnumHelper.addArmorMaterial("waterdragon", "untiered:waterdragon", 56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
-	static final ArmorMaterial LEAFDRAGON = EnumHelper.addArmorMaterial("leafdragon", "untiered:leafdragon",    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.0F);
-	static final ArmorMaterial FIREDRAGON = EnumHelper.addArmorMaterial("firedragon", "untiered:firedragon",    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4.0F);
-	static final ArmorMaterial CANDY = EnumHelper.addArmorMaterial("candy", "untiered:candy",   		        56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
-	static final ArmorMaterial ZAARVOX = EnumHelper.addArmorMaterial("zaarvox", "untiered:zaarvox",		  	    56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
-	static final ArmorMaterial RESURRECTED = EnumHelper.addArmorMaterial("resurrected", "untiered:resurrected", 56, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
-	static final ArmorMaterial SPECTRAL = EnumHelper.addArmorMaterial("spectral", "untiered:spectral", 	  		24, new int[]{3,6,8,3}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.0F);
+	static final ArmorMaterial WOODLAND = EnumHelper.addArmorMaterial("woodland", "untiered:woodland", 	  		31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial TWILIGHT = EnumHelper.addArmorMaterial("twilight", "untiered:twilight", 	  		31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial ANCIENT = EnumHelper.addArmorMaterial("ancient", "untiered:ancient", 			31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial STARMOTHER = EnumHelper.addArmorMaterial("starmother", "untiered:starmother", 	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial BONE = EnumHelper.addArmorMaterial("bone", "untiered:bone", 						31, new int[]{4,7,8,5}, 40, SoundEvents.ENTITY_SKELETON_AMBIENT, 0.0F);
+	static final ArmorMaterial SANDS = EnumHelper.addArmorMaterial("sands", "untiered:sands", 			  	    31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial DIVINATION = EnumHelper.addArmorMaterial("divination", "untiered:divination", 	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial SOULLESS = EnumHelper.addArmorMaterial("soulless", "untiered:soulless",     	    51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 4.0F);
+	static final ArmorMaterial FAIRY = EnumHelper.addArmorMaterial("fairy", "untiered:fairy", 			  	    51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial CORAL = EnumHelper.addArmorMaterial("coral", "untiered:coral", 			  		51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
+	static final ArmorMaterial SPECTRAL = EnumHelper.addArmorMaterial("spectral", "untiered:spectral", 	  		51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 2.0F);
+	static final ArmorMaterial ZAARVOX = EnumHelper.addArmorMaterial("zaarvox", "untiered:zaarvox",			  	51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial CANDY = EnumHelper.addArmorMaterial("candy", "untiered:candy",   		        51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial RESURRECTED = EnumHelper.addArmorMaterial("resurrected", "untiered:resurrected", 51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial LEVIATHAN = EnumHelper.addArmorMaterial("leviathan", "untiered:leviathan", 		51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 2.0F);
+	static final ArmorMaterial WYRM = EnumHelper.addArmorMaterial("wyrm", "untiered:wyrm", 						51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 2.0F);
+	static final ArmorMaterial GOLEM = EnumHelper.addArmorMaterial("golem", "untiered:golem", 					51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial MERCY = EnumHelper.addArmorMaterial("mercy", "untiered:mercy", 					51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 4.0F);
+	static final ArmorMaterial ALMANDINE = EnumHelper.addArmorMaterial("almandine", "untiered:almandine", 		51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 4.0F);
+	static final ArmorMaterial NIL = EnumHelper.addArmorMaterial("nil", "untiered:nil", 						51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial DOMINION = EnumHelper.addArmorMaterial("dominion", "untiered:dominion",       	51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial ACROPOLIS = EnumHelper.addArmorMaterial("acropolis", "untiered:acropolis",       51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial ANNIHILATION = EnumHelper.addArmorMaterial("annihilation", "untiered:annihilation", 51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	static final ArmorMaterial WATERDRAGON = EnumHelper.addArmorMaterial("waterdragon", "untiered:waterdragon", 31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial LEAFDRAGON = EnumHelper.addArmorMaterial("leafdragon", "untiered:leafdragon",    51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 2.0F);
+	static final ArmorMaterial FIREDRAGON = EnumHelper.addArmorMaterial("firedragon", "untiered:firedragon",    51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
 	
+	static final ArmorMaterial RITUAL = EnumHelper.addArmorMaterial("ritual", "untiered:ritual", 		      	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial JUNGLE = EnumHelper.addArmorMaterial("jungle", "untiered:jungle", 		      	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial SPECTRE = EnumHelper.addArmorMaterial("spectre", "untiered:spectre", 	      	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial ADEPT = EnumHelper.addArmorMaterial("adept", "untiered:adept", 	      			31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial ELDER = EnumHelper.addArmorMaterial("elder", "untiered:elder", 	      			31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial SORCERER = EnumHelper.addArmorMaterial("sorcerer", "untiered:sorcerer", 	      	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial MOLTEN = EnumHelper.addArmorMaterial("molten", "untiered:molten", 	   		   	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial SKULD = EnumHelper.addArmorMaterial("skuld", "untiered:skuld", 					31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial TORMENT = EnumHelper.addArmorMaterial("torment", "untiered:torment", 	      	31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial SHATTERS = EnumHelper.addArmorMaterial("shatters", "untiered:shatters", 			31, new int[]{4,7,8,5}, 40, SoundEvents.ENTITY_MULE_HURT, 0.0F);
+	static final ArmorMaterial BEEHIVE = EnumHelper.addArmorMaterial("beehive", "untiered:beehive", 	        31, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
+	static final ArmorMaterial JACKONAUT = EnumHelper.addArmorMaterial("jackonaut", "untiered:jackonaut", 	    51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 4.0F);
+	static final ArmorMaterial JUGGERNAUT = EnumHelper.addArmorMaterial("juggernaut", "untiered:juggernaut", 	51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 4.0F);
+	static final ArmorMaterial GENERAL = EnumHelper.addArmorMaterial("general", "untiered:general", 	        51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 4.0F);
+	static final ArmorMaterial REDIRON = EnumHelper.addArmorMaterial("rediron", "untiered:rediron", 	        51, new int[]{4,7,8,5}, 40, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 4.0F);
 	
 	static final String[] SPEED = new String[] {
-			"kendo_stick","muramasa", "masamune", "sadamune", "ichimonji", "jewel_eye", "demon_edge", "sky_edge", "night_edge", 
-			"amakuni", "kunimitsu", "kotetsu", "kusanagi", "doku_no_ken", "celestial", "ray_katana", "izanami", "izanagi", "fencoil_staff", "thorn_staff", 
-			"storm_staff", "martyr_staff", "witch_staff", "femur_staff", "searing_staff", "breath_staff", "pillar_staff", "realmshaper_staff", "ice_staff", 
-			"sire_staff", "fulcrum_staff",  "duskdawn_staff", "disintegrator_staff", "hegemony_staff", "spire_staff"
+			"kendo_stick","muramasa", "masamune", "sadamune", "ichimonji", "jewel_eye", "demon_edge", "sky_edge", "night_edge", "amakuni", "kotetsu", "kusanagi", 
+			"doku_no_ken", "celestial", "ray_katana", "izanami", "izanagi", "fencoil_staff", "thorn_staff", "storm_staff", "martyr_staff", "witch_staff", "femur_staff", 
+			"searing_staff", "breath_staff", "pillar_staff", "realmshaper_staff", "ice_staff", "sire_staff", "fulcrum_staff",  "duskdawn_staff", "disintegrator_staff", 
+			"hegemony_staff", "spire_staff"
 			};
 
 	static final String[] EXTRA_SPEED = new String[] {
@@ -60,18 +82,17 @@ public class UntieredEventHandler {
 			"fairy_sword", "oryx_sword", "doctor_sword", "skull_sword", "crystal_sword", "indomptable_sword", "acclaim_sword", "majesty_sword", "skysplitter_sword", 
 			"splendor_sword", "archon_sword", "dragonsoul_sword", "ravenheart_sword", "falchion_sword", "redbeak_sword", "tempestuous_sword", "prismatic_sword", 
 			"scaeva_sword", "iron_mass_sword", "bound_sword", "scorned_sword", "unleashed_sword", "beltimber_sword", "grelwood_sword", "sun_sword", "aurumvorax_sword", 
-			"cospri_sword", "edge_sword", "est_sword", "hiltless_sword", "oro_sword", "oni_sword", "lakishu_sword", "ephemeral_sword", "innbury_sword", 
-			"nametaker_sword", "story_sword", "fate_sword", "hyaon_sword", "rippling_sword", "varunastra_sword", "dreamfeather_sword", "rigwald_sword", "ahn_sword", 
-			"rebuke_sword", "saviour_sword", "ewar_sword", "daresso_sword", "fidelitas_sword", "rakiata_sword", "kondo_sword", "doomsower_sword",
-			"eagle_axe", "dreadarc_axe", "fury_axe", "moon_axe", "actum_axe", "jack_axe", "dyadus_axe"
+			"cospri_sword", "edge_sword", "est_sword", "hiltless_sword", "oro_sword", "oni_sword", "lakishu_sword", "ephemeral_sword", "innbury_sword", "nametaker_sword", "story_sword", "fate_sword", "hyaon_sword", "rippling_sword", "varunastra_sword", "dreamfeather_sword", "rigwald_sword", "ahn_sword", 
+			"rebuke_sword", "saviour_sword", "ewar_sword", "daresso_sword", "fidelitas_sword", "rakiata_sword", "kondo_sword", "doomsower_sword", "eagle_axe", 
+			"dreadarc_axe", "fury_axe", "moon_axe", "actum_axe", "jack_axe", "dyadus_axe"
 			};
 
 	
 	static final String[] EXTRA_DAMAGE = new String[] {
-			"lavianga_mace",  "clay_mace", "frost_mace", "nebuloch_mace", "axiom_mace", 
-			"brutus_mace", "bitter_mace", "seer_mace", "truth_mace", "balefire_mace", "doon_mace", "augyre_mace","hymn_mace", "quecholli_mace", "baptism_mace", 
-			"chober_mace", "jorrhast_mace", "voidhome_mace", "tide_mace", "kongor_mace", "demon_blade", "colossus_sword", "slasher_sword", 
-			"bedrock_sword", "limb_axe", "reaper_axe", "harvest_axe", "sinvicta_axe", "atziri_axe", "hezmana_axe", "debeon_axe", "kitava_axe"
+			"lavianga_mace", "frost_mace", "nebuloch_mace", "axiom_mace", "devastation_mace", "fulmination_mace", "honey_mace", "cnidaria_mace", "storms_mace", 
+			"skybolts_mace", "cloudflash_mace", "brutus_mace", "bitter_mace", "seer_mace", "truth_mace", "balefire_mace", "doon_mace", "augyre_mace","hymn_mace", 
+			"quecholli_mace", "baptism_mace", "chober_mace", "jorrhast_mace", "voidhome_mace", "tide_mace", "kongor_mace", "demon_blade", "colossus_sword", 
+			"slasher_sword", "bedrock_sword", "limb_axe", "reaper_axe", "harvest_axe", "atziri_axe", "hezmana_axe", "debeon_axe", "kitava_axe"
 			};
 
 	static IForgeRegistry<Item> reg;
@@ -80,48 +101,64 @@ public class UntieredEventHandler {
     public static void registerItems(RegistryEvent.Register<Item> event) {
     	reg = event.getRegistry();
 
+    	regArmorSet("soulless", SOULLESS);
     	regArmorSet("woodland", WOODLAND);
     	regArmorSet("twilight", TWILIGHT);
     	regArmorSet("fairy", FAIRY);
-    	regArmorSet("soulless", SOULLESS);
-    	regArmorSet("acropolis", ACROPOLIS);
     	regArmorSet("coral", CORAL);
     	regArmorSet("spectral", SPECTRAL);
+    	regArmorSet("zaarvox", ZAARVOX);
+    	regArmorSet("candy", CANDY);
+    	regArmorSet("resurrected", RESURRECTED);
+    	regArmorSet("nil", NIL);
+    	regArmorSet("golem", GOLEM);
+    	regArmorSet("divination", DIVINATION);
+    	regArmorSet("mercy", MERCY);
+    	regArmorSet("almandine", ALMANDINE);
+    	regArmorSet("bone", BONE);
+    	regArmorSet("ancient", ANCIENT);
+    	regArmorSet("sands", SANDS);
+    	regArmorSet("starmother", STARMOTHER);
+    	regArmorSet("wyrm", WYRM);
+    	regArmorSet("leviathan", LEVIATHAN);
+    	regArmorSet("dominion", DOMINION);
+    	regArmorSet("acropolis", ACROPOLIS);
+    	regArmorSet("annihilation", ANNIHILATION);
     	regArmorSet("waterdragon", WATERDRAGON);
     	regArmorSet("leafdragon", LEAFDRAGON);
     	regArmorSet("firedragon", FIREDRAGON);
-
-    	regArmorPiece("ritual_helmet", RITUAL, 1, 0);
-    	regArmorPiece("ritual_chestplate", RITUAL, 1, 1);
     	
-    	regArmorPiece("jungle_helmet", JUNGLE, 1, 0);
-    	regArmorPiece("jungle_chestplate", JUNGLE, 1, 1);
-    	
-    	regArmorPiece("spectre_helmet", SPECTRE, 1, 0);
-    	regArmorPiece("spectre_chestplate", SPECTRE, 1, 1);
-
-    	regArmorPiece("beehive_helmet", BEEHIVE, 1, 0);
-    	regArmorPiece("sands_leggings", SANDS, 2, 2);
-    	regArmorPiece("candy_chestplate", CANDY, 1, 1);
-    	regArmorPiece("resurrected_chestplate", RESURRECTED, 1, 1);
-    	regArmorPiece("zaarvox_chestplate", ZAARVOX, 1, 1);
-    	
+    	regSkullSet("ritual", RITUAL);
+    	regSkullSet("jungle", JUNGLE);
+    	regSkullSet("spectre", SPECTRE);
+    	regSkullSet("adept", ADEPT);
+    	regSkullSet("elder", ELDER);
+    	regSkullSet("sorcerer", SORCERER);
+    	regSkullSet("molten", MOLTEN);
+    	regSkullSet("torment", TORMENT);
+    	regSkullSet("skuld", SKULD);
+    	regSkullSet("shatters", SHATTERS);
+    	regSkullSet("rediron", REDIRON);
+    	regSkullSet("beehive", BEEHIVE);
+    	regSkullSet("general", GENERAL);
+    	regSkullSet("jackonaut", JACKONAUT);
+    	regSkullSet("juggernaut", JUGGERNAUT);
 
     	for(String name : EXTRA_SPEED) {
-			reg.register(new Weapon(TIERED, name, 0.625, 2.165));
+			reg.register(new Weapon(UNTIERED, name, 0.625, 2.165));
 			}
     	
     	for(String name : SPEED) {
-	    	reg.register(new Weapon(TIERED, name, 0.835, 2.5));
+	    	reg.register(new Weapon(UNTIERED, name, 0.835, 2.5));
 			}
     	
     	
     	for(String name : DAMAGE) {
-	    	reg.register(new Weapon(TIERED, name, 1, 4));
+	    	reg.register(new Weapon(UNTIERED, name, 1, 4));
 			}
     	
     	for(String name : EXTRA_DAMAGE) {
-	    	reg.register(new Weapon(TIERED, name, 1.25, 5.666));
+	    	reg.register(new Weapon(UNTIERED, name, 1.25, 5.666));
 			}
 
     	reg.register(new Weapon(UNTIERED, "void_katana", 1.5, 9.666));
@@ -132,7 +169,6 @@ public class UntieredEventHandler {
     	reg.register(CRONUS);
     }
     
-
 	final static Item CRONUS = new Weapon(UNTIERED, "cronus_dagger", 0.625, 4);
 	
 	private static void regArmorSet(final String name, final ItemArmor.ArmorMaterial material) {
@@ -141,10 +177,12 @@ public class UntieredEventHandler {
         reg.register(new Armor(name + "_leggings", material, 2, equip(2)));
         reg.register(new Armor(name + "_boots", material, 1, equip(3)));
     }
-	
-	private static void regArmorPiece(final String name, final ItemArmor.ArmorMaterial material, final int index, final int slot) {
-        reg.register(new Armor(name, material, index, equip(slot)));
+
+	private static void regSkullSet(final String name, final ItemArmor.ArmorMaterial material) {
+        reg.register(new Armor(name + "_helmet", material, 1, equip(0)));
+        reg.register(new Armor(name + "_chestplate", material, 1, equip(1)));
     }
+
 
 	static EntityEquipmentSlot equip(int slot) {
 		if (slot == 0) {

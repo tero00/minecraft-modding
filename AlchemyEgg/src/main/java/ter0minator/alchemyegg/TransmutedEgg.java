@@ -23,7 +23,7 @@ public class TransmutedEgg extends Item {
         setCreativeTab(CreativeTabs.MISC);
         setUnlocalizedName("transmuted_egg");
         setRegistryName(Reference.MODID, "transmuted_egg");
-        setMaxStackSize(16); 
+        setMaxStackSize(64); 
     }
 
     private static final Random RANDOM = new Random();
@@ -35,7 +35,11 @@ public class TransmutedEgg extends Item {
         world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_SNOW_BREAK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
         world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.BLOCK_STONE_BREAK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
         world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_MULE_HURT, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-
+        
+        if (RANDOM.nextInt(100) % 99 == 0) {
+        	world.playSound(null, player.posX, player.posY, player.posZ+5, SoundEvents.ENTITY_CREEPER_PRIMED, SoundCategory.AMBIENT, 0.8F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+        }
+        
         if (!world.isRemote) {
             Item randomItem = getRandomItem();
             if (randomItem != null) {

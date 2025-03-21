@@ -1,7 +1,0 @@
-package ter0minator.alchemyegg;
-
-import net.minecraft.item.Item;
-
-public class Eggs {
-    public static final TransmutedEgg TRANSMUTED_EGG = EggEventHandler.TRANSMUTED_EGG;
-}
