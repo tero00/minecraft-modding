@@ -200,13 +200,12 @@
     <td><img src="sprites_scaled/kondo_sword.png" alt="kondo_sword.png" width="160"></td>
     <td><img src="sprites_scaled/kongor_mace.png" alt="kongor_mace.png" width="160"></td>
     <td><img src="sprites_scaled/kotetsu.png" alt="kotetsu.png" width="160"></td>
-    <td><img src="sprites_scaled/kunimitsu.png" alt="kunimitsu.png" width="160"></td>
     <td><img src="sprites_scaled/kusanagi.png" alt="kusanagi.png" width="160"></td>
     <td><img src="sprites_scaled/lakishu_sword.png" alt="lakishu_sword.png" width="160"></td>
     <td><img src="sprites_scaled/lavianga_mace.png" alt="lavianga_mace.png" width="160"></td>
+    <td><img src="sprites_scaled/leafdragon_boots.png" alt="leafdragon_boots.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/leafdragon_boots.png" alt="leafdragon_boots.png" width="160"></td>
     <td><img src="sprites_scaled/leafdragon_chestplate.png" alt="leafdragon_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/leafdragon_helmet.png" alt="leafdragon_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/leafdragon_leggings.png" alt="leafdragon_leggings.png" width="160"></td>
@@ -216,9 +215,9 @@
     <td><img src="sprites_scaled/leviathan_leggings.png" alt="leviathan_leggings.png" width="160"></td>
     <td><img src="sprites_scaled/limb_axe.png" alt="limb_axe.png" width="160"></td>
     <td><img src="sprites_scaled/majesty_sword.png" alt="majesty_sword.png" width="160"></td>
+    <td><img src="sprites_scaled/marohi_mace.png" alt="marohi_mace.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/marohi_mace.png" alt="marohi_mace.png" width="160"></td>
     <td><img src="sprites_scaled/martyr_staff.png" alt="martyr_staff.png" width="160"></td>
     <td><img src="sprites_scaled/masamune.png" alt="masamune.png" width="160"></td>
     <td><img src="sprites_scaled/mercy_boots.png" alt="mercy_boots.png" width="160"></td>
@@ -228,9 +227,9 @@
     <td><img src="sprites_scaled/mightflay_dagger.png" alt="mightflay_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/mithril_dagger.png" alt="mithril_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/molten_chestplate.png" alt="molten_chestplate.png" width="160"></td>
+    <td><img src="sprites_scaled/molten_helmet.png" alt="molten_helmet.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/molten_helmet.png" alt="molten_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/moon_axe.png" alt="moon_axe.png" width="160"></td>
     <td><img src="sprites_scaled/muramasa.png" alt="muramasa.png" width="160"></td>
     <td><img src="sprites_scaled/nametaker_sword.png" alt="nametaker_sword.png" width="160"></td>
@@ -240,9 +239,9 @@
     <td><img src="sprites_scaled/nil_chestplate.png" alt="nil_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/nil_helmet.png" alt="nil_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/nil_leggings.png" alt="nil_leggings.png" width="160"></td>
+    <td><img src="sprites_scaled/obsidian_dagger.png" alt="obsidian_dagger.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/obsidian_dagger.png" alt="obsidian_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/okuninushi.png" alt="okuninushi.png" width="160"></td>
     <td><img src="sprites_scaled/omoikaine.png" alt="omoikaine.png" width="160"></td>
     <td><img src="sprites_scaled/omononushi.png" alt="omononushi.png" width="160"></td>
@@ -252,9 +251,9 @@
     <td><img src="sprites_scaled/pillar_staff.png" alt="pillar_staff.png" width="160"></td>
     <td><img src="sprites_scaled/prismatic_sword.png" alt="prismatic_sword.png" width="160"></td>
     <td><img src="sprites_scaled/quecholli_mace.png" alt="quecholli_mace.png" width="160"></td>
+    <td><img src="sprites_scaled/queen_bee_stinger.png" alt="queen_bee_stinger.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/queen_bee_stinger.png" alt="queen_bee_stinger.png" width="160"></td>
     <td><img src="sprites_scaled/rage_dagger.png" alt="rage_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/raijin.png" alt="raijin.png" width="160"></td>
     <td><img src="sprites_scaled/rakiata_sword.png" alt="rakiata_sword.png" width="160"></td>
@@ -264,9 +263,9 @@
     <td><img src="sprites_scaled/reaper_axe.png" alt="reaper_axe.png" width="160"></td>
     <td><img src="sprites_scaled/rebuke_sword.png" alt="rebuke_sword.png" width="160"></td>
     <td><img src="sprites_scaled/redbeak_sword.png" alt="redbeak_sword.png" width="160"></td>
+    <td><img src="sprites_scaled/rediron_chestplate.png" alt="rediron_chestplate.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/rediron_chestplate.png" alt="rediron_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/rediron_helmet.png" alt="rediron_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/resurrected_boots.png" alt="resurrected_boots.png" width="160"></td>
     <td><img src="sprites_scaled/resurrected_chestplate.png" alt="resurrected_chestplate.png" width="160"></td>
@@ -276,9 +275,9 @@
     <td><img src="sprites_scaled/rippling_sword.png" alt="rippling_sword.png" width="160"></td>
     <td><img src="sprites_scaled/ritual_chestplate.png" alt="ritual_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/ritual_helmet.png" alt="ritual_helmet.png" width="160"></td>
+    <td><img src="sprites_scaled/rose_dagger.png" alt="rose_dagger.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/rose_dagger.png" alt="rose_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/ryujin.png" alt="ryujin.png" width="160"></td>
     <td><img src="sprites_scaled/sadamune.png" alt="sadamune.png" width="160"></td>
     <td><img src="sprites_scaled/sands_boots.png" alt="sands_boots.png" width="160"></td>
@@ -288,22 +287,21 @@
     <td><img src="sprites_scaled/saviour_sword.png" alt="saviour_sword.png" width="160"></td>
     <td><img src="sprites_scaled/scaeva_sword.png" alt="scaeva_sword.png" width="160"></td>
     <td><img src="sprites_scaled/scorned_sword.png" alt="scorned_sword.png" width="160"></td>
+    <td><img src="sprites_scaled/searing_staff.png" alt="searing_staff.png" width="160"></td>
   </tr>
   <tr>
-    <td><img src="sprites_scaled/searing_staff.png" alt="searing_staff.png" width="160"></td>
     <td><img src="sprites_scaled/seer_mace.png" alt="seer_mace.png" width="160"></td>
     <td><img src="sprites_scaled/shatters_chestplate.png" alt="shatters_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/shatters_helmet.png" alt="shatters_helmet.png" width="160"></td>
-    <td><img src="sprites_scaled/sinvicta_axe.png" alt="sinvicta_axe.png" width="160"></td>
     <td><img src="sprites_scaled/sire_staff.png" alt="sire_staff.png" width="160"></td>
     <td><img src="sprites_scaled/skuld_chestplate.png" alt="skuld_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/skuld_helmet.png" alt="skuld_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/skull_sword.png" alt="skull_sword.png" width="160"></td>
     <td><img src="sprites_scaled/skybolts_mace.png" alt="skybolts_mace.png" width="160"></td>
-  </tr>
-  <tr>
     <td><img src="sprites_scaled/skysplitter_sword.png" alt="skysplitter_sword.png" width="160"></td>
     <td><img src="sprites_scaled/sky_edge.png" alt="sky_edge.png" width="160"></td>
+  </tr>
+  <tr>
     <td><img src="sprites_scaled/slasher_sword.png" alt="slasher_sword.png" width="160"></td>
     <td><img src="sprites_scaled/sorcerer_chestplate.png" alt="sorcerer_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/sorcerer_helmet.png" alt="sorcerer_helmet.png" width="160"></td>
@@ -311,12 +309,11 @@
     <td><img src="sprites_scaled/soulless_chestplate.png" alt="soulless_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/soulless_helmet.png" alt="soulless_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/soulless_leggings.png" alt="soulless_leggings.png" width="160"></td>
-    <td><img src="sprites_scaled/soulwrest_staff.png" alt="soulwrest_staff.png" width="160"></td>
-  </tr>
-  <tr>
     <td><img src="sprites_scaled/spectral_boots.png" alt="spectral_boots.png" width="160"></td>
     <td><img src="sprites_scaled/spectral_chestplate.png" alt="spectral_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/spectral_helmet.png" alt="spectral_helmet.png" width="160"></td>
+  </tr>
+  <tr>
     <td><img src="sprites_scaled/spectral_leggings.png" alt="spectral_leggings.png" width="160"></td>
     <td><img src="sprites_scaled/spectre_chestplate.png" alt="spectre_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/spectre_helmet.png" alt="spectre_helmet.png" width="160"></td>
@@ -324,11 +321,11 @@
     <td><img src="sprites_scaled/spirit_dagger.png" alt="spirit_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/splendor_sword.png" alt="splendor_sword.png" width="160"></td>
     <td><img src="sprites_scaled/starmother_boots.png" alt="starmother_boots.png" width="160"></td>
-  </tr>
-  <tr>
     <td><img src="sprites_scaled/starmother_chestplate.png" alt="starmother_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/starmother_helmet.png" alt="starmother_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/starmother_leggings.png" alt="starmother_leggings.png" width="160"></td>
+  </tr>
+  <tr>
     <td><img src="sprites_scaled/storms_mace.png" alt="storms_mace.png" width="160"></td>
     <td><img src="sprites_scaled/storm_staff.png" alt="storm_staff.png" width="160"></td>
     <td><img src="sprites_scaled/story_sword.png" alt="story_sword.png" width="160"></td>
@@ -336,11 +333,11 @@
     <td><img src="sprites_scaled/sunshine_dagger.png" alt="sunshine_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/sun_sword.png" alt="sun_sword.png" width="160"></td>
     <td><img src="sprites_scaled/takemikazuchi.png" alt="takemikazuchi.png" width="160"></td>
-  </tr>
-  <tr>
     <td><img src="sprites_scaled/takeminakata.png" alt="takeminakata.png" width="160"></td>
     <td><img src="sprites_scaled/taproot_dagger.png" alt="taproot_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/tempestuous_sword.png" alt="tempestuous_sword.png" width="160"></td>
+  </tr>
+  <tr>
     <td><img src="sprites_scaled/thorn_staff.png" alt="thorn_staff.png" width="160"></td>
     <td><img src="sprites_scaled/tide_mace.png" alt="tide_mace.png" width="160"></td>
     <td><img src="sprites_scaled/torment_chestplate.png" alt="torment_chestplate.png" width="160"></td>
@@ -348,11 +345,11 @@
     <td><img src="sprites_scaled/truth_mace.png" alt="truth_mace.png" width="160"></td>
     <td><img src="sprites_scaled/tsukuyomi.png" alt="tsukuyomi.png" width="160"></td>
     <td><img src="sprites_scaled/twilight_boots.png" alt="twilight_boots.png" width="160"></td>
-  </tr>
-  <tr>
     <td><img src="sprites_scaled/twilight_chestplate.png" alt="twilight_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/twilight_helmet.png" alt="twilight_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/twilight_leggings.png" alt="twilight_leggings.png" width="160"></td>
+  </tr>
+  <tr>
     <td><img src="sprites_scaled/ungil_dagger.png" alt="ungil_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/unleashed_sword.png" alt="unleashed_sword.png" width="160"></td>
     <td><img src="sprites_scaled/varunastra_sword.png" alt="varunastra_sword.png" width="160"></td>
@@ -360,11 +357,11 @@
     <td><img src="sprites_scaled/void_katana.png" alt="void_katana.png" width="160"></td>
     <td><img src="sprites_scaled/vulconus_dagger.png" alt="vulconus_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/waterdragon_boots.png" alt="waterdragon_boots.png" width="160"></td>
-  </tr>
-  <tr>
     <td><img src="sprites_scaled/waterdragon_chestplate.png" alt="waterdragon_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/waterdragon_helmet.png" alt="waterdragon_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/waterdragon_leggings.png" alt="waterdragon_leggings.png" width="160"></td>
+  </tr>
+  <tr>
     <td><img src="sprites_scaled/white_wind_dagger.png" alt="white_wind_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/widowmaker_dagger.png" alt="widowmaker_dagger.png" width="160"></td>
     <td><img src="sprites_scaled/witch_staff.png" alt="witch_staff.png" width="160"></td>
@@ -372,11 +369,11 @@
     <td><img src="sprites_scaled/woodland_chestplate.png" alt="woodland_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/woodland_helmet.png" alt="woodland_helmet.png" width="160"></td>
     <td><img src="sprites_scaled/woodland_leggings.png" alt="woodland_leggings.png" width="160"></td>
-  </tr>
-  <tr>
     <td><img src="sprites_scaled/wyrm_boots.png" alt="wyrm_boots.png" width="160"></td>
     <td><img src="sprites_scaled/wyrm_chestplate.png" alt="wyrm_chestplate.png" width="160"></td>
     <td><img src="sprites_scaled/wyrm_helmet.png" alt="wyrm_helmet.png" width="160"></td>
+  </tr>
+  <tr>
     <td><img src="sprites_scaled/wyrm_leggings.png" alt="wyrm_leggings.png" width="160"></td>
     <td><img src="sprites_scaled/zaarvox_boots.png" alt="zaarvox_boots.png" width="160"></td>
     <td><img src="sprites_scaled/zaarvox_chestplate.png" alt="zaarvox_chestplate.png" width="160"></td>
